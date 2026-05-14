@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
+class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_1
 {
     public static $files = array (
         '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-assets/actions.php',
@@ -60,6 +60,7 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
         'Automattic\\Jetpack\\Connection\\Error_Handler' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-error-handler.php',
         'Automattic\\Jetpack\\Connection\\External_Storage' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-external-storage.php',
         'Automattic\\Jetpack\\Connection\\Initial_State' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-initial-state.php',
+        'Automattic\\Jetpack\\Connection\\Jetpack_Connector' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/connectors/class-jetpack-connector.php',
         'Automattic\\Jetpack\\Connection\\Manager' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-manager.php',
         'Automattic\\Jetpack\\Connection\\Manager_Interface' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/interface-manager.php',
         'Automattic\\Jetpack\\Connection\\Nonce_Handler' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-nonce-handler.php',
@@ -86,7 +87,6 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
         'Automattic\\Jetpack\\Connection\\Utils' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-utils.php',
         'Automattic\\Jetpack\\Connection\\Webhooks' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-webhooks.php',
         'Automattic\\Jetpack\\Connection\\Webhooks\\Authorize_Redirect' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/webhooks/class-authorize-redirect.php',
-        'Automattic\\Jetpack\\Connection\\Wpcom_Connector' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/connectors/class-wpcom-connector.php',
         'Automattic\\Jetpack\\Connection\\XMLRPC_Async_Call' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-xmlrpc-async-call.php',
         'Automattic\\Jetpack\\Connection\\XMLRPC_Connector' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-xmlrpc-connector.php',
         'Automattic\\Jetpack\\Constants' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-constants/src/class-constants.php',
@@ -112,7 +112,6 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
         'Automattic\\Jetpack\\Licensing' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php',
         'Automattic\\Jetpack\\Licensing\\Endpoints' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-licensing/src/class-endpoints.php',
         'Automattic\\Jetpack\\Modules' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php',
-        'Automattic\\Jetpack\\My_Jetpack\\Activitylog' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-activitylog.php',
         'Automattic\\Jetpack\\My_Jetpack\\Historically_Active_Modules' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-historically-active-modules.php',
         'Automattic\\Jetpack\\My_Jetpack\\Hybrid_Product' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-hybrid-product.php',
         'Automattic\\Jetpack\\My_Jetpack\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php',
@@ -173,6 +172,7 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
         'Automattic\\Jetpack\\Status\\Request' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-request.php',
         'Automattic\\Jetpack\\Status\\Visitor' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-visitor.php',
         'Automattic\\Jetpack\\Sync\\Actions' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sync/src/class-actions.php',
+        'Automattic\\Jetpack\\Sync\\Activity_Log_Event' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sync/src/class-activity-log-event.php',
         'Automattic\\Jetpack\\Sync\\Codec_Interface' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sync/src/interface-codec.php',
         'Automattic\\Jetpack\\Sync\\Data_Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sync/src/class-data-settings.php',
         'Automattic\\Jetpack\\Sync\\Dedicated_Sender' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sync/src/class-dedicated-sender.php',
@@ -240,12 +240,14 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
         'Automattic\\Jetpack\\VideoPress\\Block_Replacement' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-replacement.php',
         'Automattic\\Jetpack\\VideoPress\\Data' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-data.php',
         'Automattic\\Jetpack\\VideoPress\\Divi' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-divi.php',
+        'Automattic\\Jetpack\\VideoPress\\Initial_State' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initial-state.php',
         'Automattic\\Jetpack\\VideoPress\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php',
         'Automattic\\Jetpack\\VideoPress\\Jwt_Token_Bridge' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-jwt-token-bridge.php',
         'Automattic\\Jetpack\\VideoPress\\Module_Control' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-module-control.php',
         'Automattic\\Jetpack\\VideoPress\\Options' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php',
         'Automattic\\Jetpack\\VideoPress\\Package_Version' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-package-version.php',
         'Automattic\\Jetpack\\VideoPress\\Plan' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-plan.php',
+        'Automattic\\Jetpack\\VideoPress\\Rest_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-rest-controller.php',
         'Automattic\\Jetpack\\VideoPress\\Site' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-site.php',
         'Automattic\\Jetpack\\VideoPress\\Stats' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-stats.php',
         'Automattic\\Jetpack\\VideoPress\\Status' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-status.php',
@@ -263,6 +265,7 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Attachment_VideoPress_Field' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-attachment-field-videopress.php',
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress.php',
         'Automattic\\Jetpack\\VideoPress\\XMLRPC' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php',
+        'Automattic\\Jetpack\\WP_Build_Polyfills\\WP_Build_Polyfills' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wp-build-polyfills/src/class-wp-build-polyfills.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Jetpack_IXR_Client' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php',
         'Jetpack_IXR_ClientMulticall' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-clientmulticall.php',
@@ -287,9 +290,9 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_1::$classMap;
 
         }, null, ClassLoader::class);
     }
