@@ -87,9 +87,10 @@ function jetpack_videopress_get_jetpack_videopress_dashboard_wp_admin_menu_items
  */
 function jetpack_videopress_jetpack_videopress_dashboard_wp_admin_preload_data() {
 	// Define paths to preload - same for all pages
-	// Please also change packages/core-data/src/entities.js when changing this.
+	// This must exactly match the _fields list in packages/core-data/src/entities.js,
+	// same fields in the same order, or the preload is never consumed.
 	$preload_paths = array(
-		'/?_fields=description,gmt_offset,home,image_sizes,image_size_threshold,name,site_icon,site_icon_url,site_logo,timezone_string,url,page_for_posts,page_on_front,show_on_front',
+		'/?_fields=description,gmt_offset,home,image_max_bit_depth,image_sizes,image_size_threshold,image_strip_meta,name,site_icon,site_icon_url,site_logo,timezone_string,url,page_for_posts,page_on_front,show_on_front',
 		array( '/wp/v2/settings', 'OPTIONS' ),
 	);
 
@@ -155,7 +156,7 @@ function jetpack_videopress_jetpack_videopress_dashboard_wp_admin_enqueue_script
 		// 2. It initializes the boot module as an inline script.
 		wp_register_script( 'jetpack-videopress-dashboard-wp-admin-prerequisites', '', $asset['dependencies'], $asset['version'], true );
 
-		$init_modules = [];
+		$init_modules = ["@jetpack-videopress/init"];
 
 		/*
 		 * Add inline script to initialize the app using initSinglePage (no menuItems).
@@ -171,7 +172,26 @@ function jetpack_videopress_jetpack_videopress_dashboard_wp_admin_enqueue_script
 		( mountId, routes, initModules ) => {
 			const run = async () => {
 				const mod = await import( "@wordpress/boot" );
-				mod.initSinglePage( { mountId, routes, initModules } );
+				/*
+				 * Run the init modules here instead of delegating to
+				 * initSinglePage(): WordPress cores that bundle an older
+				 * @wordpress/boot (initModules support postdates WP 7.0's copy,
+				 * and the import map resolves @wordpress/boot to core's bundle
+				 * when core provides one) silently ignore the option, so init
+				 * modules would never execute. Running them before
+				 * initSinglePage() gives identical behavior on every core.
+				 */
+				for ( const id of initModules ?? [] ) {
+					try {
+						const initModule = await import( id );
+						if ( typeof initModule.init === "function" ) {
+							await initModule.init();
+						}
+					} catch ( error ) {
+						console.warn( "Failed to run boot init module:", id, error );
+					}
+				}
+				mod.initSinglePage( { mountId, routes } );
 			};
 			if ( document.readyState === "loading" ) {
 				document.addEventListener( "DOMContentLoaded", run );
@@ -179,7 +199,7 @@ function jetpack_videopress_jetpack_videopress_dashboard_wp_admin_enqueue_script
 				run();
 			}
 		}
-		JS;
+JS;
 		wp_add_inline_script(
 			'jetpack-videopress-dashboard-wp-admin-prerequisites',
 			sprintf(
@@ -209,7 +229,7 @@ function jetpack_videopress_jetpack_videopress_dashboard_wp_admin_enqueue_script
 		);
 
 		// Add init modules as static dependencies
-			// No init modules configured
+			$boot_dependencies[] = array( 'import' => 'static', 'id' => '@jetpack-videopress/init' );
 
 		// Add all registered routes as dependencies
 		foreach ( $routes as $route ) {
