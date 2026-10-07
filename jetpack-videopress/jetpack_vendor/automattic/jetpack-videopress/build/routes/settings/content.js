@@ -33,7 +33,7 @@ __( "Reduced pricing is a limited offer for the first year and renews at regular
 __( "/month, paid yearly", "jetpack-videopress-pkg" );
 __( "% off", "jetpack-videopress-pkg" );
 __( "% off the first year", "jetpack-videopress-pkg" );
-__( "Products", "jetpack-videopress-pkg" );
+__( "Features", "jetpack-videopress-pkg" );
 __( "Help", "jetpack-videopress-pkg" );
 __( "Jetpack", "jetpack-videopress-pkg" );
 /* translators: %s: an error message. */
@@ -57,9 +57,17 @@ __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-vide
 __( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
 __( "Loading…", "jetpack-videopress-pkg" );
 __( "Restore Connection", "jetpack-videopress-pkg" );
-__( "A connection check failed.", "jetpack-videopress-pkg" );
 __( "Take Action", "jetpack-videopress-pkg" );
 __( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
+__( "Add at least three chapters.", "jetpack-videopress-pkg" );
+__( "The first chapter must start at 0:00.", "jetpack-videopress-pkg" );
+__( "At least three chapters are required.", "jetpack-videopress-pkg" );
+__( "Every chapter needs a title.", "jetpack-videopress-pkg" );
+__( "Chapters must be in ascending order without repeated timestamps.", "jetpack-videopress-pkg" );
+__( "Chapters must be at least 10 seconds apart.", "jetpack-videopress-pkg" );
+__( "Chapters cannot start after the video ends.", "jetpack-videopress-pkg" );
+__( "English (auto-generated)", "jetpack-videopress-pkg" );
+__( "Video chapters could not be updated.", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );
 __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
@@ -87,6 +95,7 @@ __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
 __( "Connecting…", "jetpack-videopress-pkg" );
 __( "Connect", "jetpack-videopress-pkg" );
+__( "Checkout could not start. Please try again.", "jetpack-videopress-pkg" );
 /* translators: %1$s: the discount amount */
 __( "%1$s%% off", "jetpack-videopress-pkg" );
 __( "/month, billed yearly", "jetpack-videopress-pkg" );
@@ -98,6 +107,8 @@ __( "Video settings", "jetpack-videopress-pkg" );
 __( "Only logged-in users can play your videos", "jetpack-videopress-pkg" );
 __( "This follows your site’s Privacy setting. To change who can view your videos, update your site’s visibility in Settings → General.", "jetpack-videopress-pkg" );
 __( "Private videos won't play for signed-out visitors.", "jetpack-videopress-pkg" );
+__( "Allow sharing", "jetpack-videopress-pkg" );
+__( "When enabled, each video’s own Share setting decides whether viewers can share the video link. Turn it off to hide the share menu on every video and stop it from being turned on for individual videos.", "jetpack-videopress-pkg" );
 __( "Automatically generate subtitles for new videos", "jetpack-videopress-pkg" );
 __( "When enabled, subtitles are generated automatically for videos uploaded to this site. Existing subtitles are not affected.", "jetpack-videopress-pkg" );
 __( "Preload video data when pages load", "jetpack-videopress-pkg" );

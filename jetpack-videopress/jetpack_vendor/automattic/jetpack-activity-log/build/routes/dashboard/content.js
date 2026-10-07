@@ -10,7 +10,7 @@ __( "Jetpack Logo", "jetpack-activity-log" );
 __( "An Automattic Airline", "jetpack-activity-log" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-activity-log" );
-__( "Products", "jetpack-activity-log" );
+__( "Features", "jetpack-activity-log" );
 __( "Help", "jetpack-activity-log" );
 __( "Jetpack", "jetpack-activity-log" );
 __( "Sections", "jetpack-activity-log" );
@@ -39,7 +39,6 @@ __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-acti
 __( "Reconnecting Jetpack", "jetpack-activity-log" );
 __( "Loading…", "jetpack-activity-log" );
 __( "Restore Connection", "jetpack-activity-log" );
-__( "A connection check failed.", "jetpack-activity-log" );
 __( "Take Action", "jetpack-activity-log" );
 __( "Reconnecting Jetpack…", "jetpack-activity-log" );
 /* translators: 1: Calendar type. 2: Current month and year. */

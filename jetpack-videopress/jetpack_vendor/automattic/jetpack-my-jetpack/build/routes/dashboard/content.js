@@ -21,7 +21,7 @@ __( "Jetpack Logo", "jetpack-my-jetpack" );
 __( "An Automattic Airline", "jetpack-my-jetpack" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-my-jetpack" );
-__( "Products", "jetpack-my-jetpack" );
+__( "Features", "jetpack-my-jetpack" );
 __( "Help", "jetpack-my-jetpack" );
 __( "Jetpack", "jetpack-my-jetpack" );
 __( "An error occurred. Please try again.", "jetpack-my-jetpack" );
@@ -126,7 +126,6 @@ __( "An unknown error occurred during license activation. Please try again.", "j
 __( "This is not a valid license key. Please try again.", "jetpack-my-jetpack" );
 /* translators: %s is the name of the information being fetched, e.g. "site purchases". */
 __( "There was an error fetching your %s information. Check your site connectivity and try again.", "jetpack-my-jetpack" );
-__( "A connection check failed.", "jetpack-my-jetpack" );
 __( "Your site host is on a private network. Sites can connect to WordPress.com only on public sites.", "jetpack-my-jetpack" );
 __( "This site has been suspended.", "jetpack-my-jetpack" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-my-jetpack" );
@@ -166,6 +165,7 @@ __( "We’re sorry to see you go. Here at Jetpack, we’re always striving to pr
 __( "Help us improve", "jetpack-my-jetpack" );
 __( "No thank you", "jetpack-my-jetpack" );
 __( "Back to my website", "jetpack-my-jetpack" );
+__( "I couldn't get it to connect.", "jetpack-my-jetpack" );
 __( "Troubleshooting - I'll be reconnecting afterwards.", "jetpack-my-jetpack" );
 __( "I can't get it to work.", "jetpack-my-jetpack" );
 __( "It slowed down my site.", "jetpack-my-jetpack" );
@@ -179,6 +179,8 @@ __( "Submitting…", "jetpack-my-jetpack" );
 __( "Submit Feedback", "jetpack-my-jetpack" );
 __( "Before you go, help us improve Jetpack", "jetpack-my-jetpack" );
 __( "Let us know what didn't work for you", "jetpack-my-jetpack" );
+__( "Submit and deactivate", "jetpack-my-jetpack" );
+__( "Skip and deactivate", "jetpack-my-jetpack" );
 __( "Skip for now", "jetpack-my-jetpack" );
 __( "Thank you!", "jetpack-my-jetpack" );
 __( "Your answer has been submitted. <br/>Thanks for your input on how we can improve Jetpack.", "jetpack-my-jetpack" );
@@ -195,13 +197,6 @@ __( "At least one user must be connected for your Jetpack products to work prope
 __( "Disconnect my user account", "jetpack-my-jetpack" );
 __( "Disconnect Jetpack", "jetpack-my-jetpack" );
 __( "Go back", "jetpack-my-jetpack" );
-__( "Overview", "jetpack-my-jetpack" );
-__( "Active", "jetpack-my-jetpack" );
-__( "Inactive", "jetpack-my-jetpack" );
-/* translators: %s is the feature name. */
-__( "Deactivate %s", "jetpack-my-jetpack" );
-/* translators: %s is the feature name. */
-__( "Activate %s", "jetpack-my-jetpack" );
 __( "My Jetpack", "jetpack-my-jetpack" );
 __( "Connect your user account", "jetpack-my-jetpack" );
 __( "Connecting your account…", "jetpack-my-jetpack" );
@@ -305,25 +300,35 @@ __( "Plugin activation needed", "jetpack-my-jetpack" );
 __( "Some plugins need to be installed and/or activated", "jetpack-my-jetpack" );
 __( "Some plugins need to be installed", "jetpack-my-jetpack" );
 __( "Some plugins need to be activated", "jetpack-my-jetpack" );
-/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$s word "plugin" as singular, or plural ("plugins"). */
-__( "To get the most out of your <link>%1$s paid subscription</link> and have access to all it’s features, we recommend you install and/or activate the following %2$s:", "jetpack-my-jetpack" );
-_n( "plugin", "plugins", 1, "jetpack-my-jetpack" );
-/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$s word "plugin" as singular, or plural ("plugins"). */
-__( "To get the most out of your <link>%1$s paid subscription</link> and have access to all it’s features, we recommend you install and activate the following %2$s:", "jetpack-my-jetpack" );
-/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$s word "plugin" as singular, or plural ("plugins"). */
-__( "To get the most out of your <link>%1$s paid subscription</link> and have access to all it’s features, we recommend you activate the following %2$s:", "jetpack-my-jetpack" );
-/* translators: %1$s is "plugin" or "plugins" (singular/plural) */
-__( "Install and/or activate %1$s in one click", "jetpack-my-jetpack" );
-/* translators: %1$s is "plugin" or "plugins" (singular/plural) */
-__( "Install and activate %1$s in one click", "jetpack-my-jetpack" );
-/* translators: %1$s is "plugin" or "plugins" (singular/plural) */
-__( "Activate %1$s in one click", "jetpack-my-jetpack" );
+/* translators: %s is the name of the Jetpack paid plan, i.e.- "Jetpack Security". */
+__( "To get the most out of your <link>%s paid subscription</link> and have access to all its features, we recommend you install and/or activate the following plugin:", "jetpack-my-jetpack" );
+/* translators: %s is the name of the Jetpack paid plan, i.e.- "Jetpack Security". */
+__( "To get the most out of your <link>%s paid subscription</link> and have access to all its features, we recommend you install and activate the following plugin:", "jetpack-my-jetpack" );
+/* translators: %s is the name of the Jetpack paid plan, i.e.- "Jetpack Security". */
+__( "To get the most out of your <link>%s paid subscription</link> and have access to all its features, we recommend you activate the following plugin:", "jetpack-my-jetpack" );
+/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$d is the number of plugins. */
+_n( "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and/or activate the following %2$d plugin:", "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and/or activate the following %2$d plugins:", 1, "jetpack-my-jetpack" );
+/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$d is the number of plugins. */
+_n( "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and activate the following %2$d plugin:", "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and activate the following %2$d plugins:", 1, "jetpack-my-jetpack" );
+/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$d is the number of plugins. */
+_n( "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you activate the following %2$d plugin:", "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you activate the following %2$d plugins:", 1, "jetpack-my-jetpack" );
+__( "Install and/or activate plugin in one click", "jetpack-my-jetpack" );
+__( "Install and activate plugin in one click", "jetpack-my-jetpack" );
+__( "Activate plugin in one click", "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Install and/or activate %d plugin in one click", "Install and/or activate %d plugins in one click", 1, "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Install and activate %d plugin in one click", "Install and activate %d plugins in one click", 1, "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Activate %d plugin in one click", "Activate %d plugins in one click", 1, "jetpack-my-jetpack" );
+__( "Activating plugin…", "jetpack-my-jetpack" );
+__( "Installing and activating plugin…", "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Activating %d plugin…", "Activating %d plugins…", 1, "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Installing and activating %d plugin…", "Installing and activating %d plugins…", 1, "jetpack-my-jetpack" );
 __( "Needs installation and activation", "jetpack-my-jetpack" );
 __( "Needs activation", "jetpack-my-jetpack" );
-/* translators: %s is the singular or plural "plugin" or "plugins". */
-__( "Activating %s…", "jetpack-my-jetpack" );
-/* translators: %s is the singular or plural "plugin" or "plugins". */
-__( "Installing and activating %s…", "jetpack-my-jetpack" );
 /* translators: %s is the product name. Can be either "Scan" or "Protect". */
 __( "%s found threats on your site", "jetpack-my-jetpack" );
 __( "We’ve detected some security threats that need your attention.", "jetpack-my-jetpack" );
@@ -339,20 +344,26 @@ __( "Some products need a connection to WordPress.com to be able to work.", "jet
 __( "Connect your site", "jetpack-my-jetpack" );
 __( "Missing site connection", "jetpack-my-jetpack" );
 __( "Connecting…", "jetpack-my-jetpack" );
+__( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
+__( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
+__( "Not available on multisite", "jetpack-my-jetpack" );
 __( "Install Plugin", "jetpack-my-jetpack" );
 __( "Get plan", "jetpack-my-jetpack" );
 __( "Upgrade", "jetpack-my-jetpack" );
 __( "View", "jetpack-my-jetpack" );
 __( "Connect", "jetpack-my-jetpack" );
 __( "Troubleshoot", "jetpack-my-jetpack" );
+__( "Jetpack Search could not be activated.", "jetpack-my-jetpack" );
 __( "Install", "jetpack-my-jetpack" );
 __( "Manage", "jetpack-my-jetpack" );
 __( "Purchase", "jetpack-my-jetpack" );
 __( "Start for free", "jetpack-my-jetpack" );
 __( "Free", "jetpack-my-jetpack" );
 __( "/month, billed yearly", "jetpack-my-jetpack" );
+__( "Active", "jetpack-my-jetpack" );
 __( "Expires soon", "jetpack-my-jetpack" );
 __( "Expired plan", "jetpack-my-jetpack" );
+__( "Inactive", "jetpack-my-jetpack" );
 __( "Needs Plugin", "jetpack-my-jetpack" );
 __( "Needs user account", "jetpack-my-jetpack" );
 __( "Needs connection", "jetpack-my-jetpack" );
@@ -368,6 +379,7 @@ _n( "%s minute ago", "%s minutes ago", 1, "jetpack-my-jetpack" );
 _n( "%s second ago", "%s seconds ago", 1, "jetpack-my-jetpack" );
 __( "Please reactivate Backup on my site", "jetpack-my-jetpack" );
 __( "Backup was manually turned off. Please <a>contact support</a> to reactivate it.", "jetpack-my-jetpack" );
+__( "Your backups are still running. Activate Backup to browse and restore them from your WordPress dashboard.", "jetpack-my-jetpack" );
 __( "The last backup attempt failed.", "jetpack-my-jetpack" );
 __( "Check out our troubleshooting guide.", "jetpack-my-jetpack" );
 __( "Undo", "jetpack-my-jetpack" );
@@ -397,6 +409,8 @@ __( "Your website’s overall speed score decreased by %d.", "jetpack-my-jetpack
 __( "Your website’s overall speed score:", "jetpack-my-jetpack" );
 __( "Site speed performance:", "jetpack-my-jetpack" );
 __( "Boost your site", "jetpack-my-jetpack" );
+/* translators: %s is the name of the feature or stat the popover explains, e.g. "Auto-Firewall". */
+__( "More about %s", "jetpack-my-jetpack" );
 __( "Brute Force Protection: Active", "jetpack-my-jetpack" );
 __( "Brute Force Protection is actively blocking malicious login attempts. The number of blocked login attempts will display here soon!", "jetpack-my-jetpack" );
 __( "Brute Force Protection: Inactive", "jetpack-my-jetpack" );
@@ -435,6 +449,8 @@ __( "Shield icon - Brute Force Protection Status: Active", "jetpack-my-jetpack" 
 __( "Shield icon - Brute Force Protection Status: Inactive", "jetpack-my-jetpack" );
 __( "Shield icon - Brute Force Protection Status: Off", "jetpack-my-jetpack" );
 __( "Threats", "jetpack-my-jetpack" );
+/* translators: %d is the number of critical threats found by the last scan. */
+_n( "%d critical threat. More about threats", "%d critical threats. More about threats", 1, "jetpack-my-jetpack" );
 __( "Scan", "jetpack-my-jetpack" );
 __( "Shield icon - Scan Status: Secure", "jetpack-my-jetpack" );
 __( "Secure", "jetpack-my-jetpack" );
@@ -478,6 +494,27 @@ __( "Here are the tools that we think will help you reach your website goals:", 
 __( "Recommendations menu", "jetpack-my-jetpack" );
 __( "Previous", "jetpack-my-jetpack" );
 __( "Next", "jetpack-my-jetpack" );
+/* translators: %d is how many features are selected. */
+_n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
+__( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
+__( "Select all features", "jetpack-my-jetpack" );
+__( "Select features to activate or deactivate them together", "jetpack-my-jetpack" );
+__( "Explore all", "jetpack-my-jetpack" );
+__( "We couldn’t load your features.", "jetpack-my-jetpack" );
+__( "Refresh the page, or try again in a moment.", "jetpack-my-jetpack" );
+__( "Reload", "jetpack-my-jetpack" );
+/* translators: %s is the term someone searched the features list for. */
+__( "No features match “%s”.", "jetpack-my-jetpack" );
+__( "It may go by another name here, or the answer may be on jetpack.com.", "jetpack-my-jetpack" );
+/* translators: %s is the term someone searched the features list for. */
+__( "Search jetpack.com for “%s”", "jetpack-my-jetpack" );
+__( "No features are active yet.", "jetpack-my-jetpack" );
+__( "Turn one on and it will appear here.", "jetpack-my-jetpack" );
+__( "Everything is turned on.", "jetpack-my-jetpack" );
+__( "There are no inactive features left on this site.", "jetpack-my-jetpack" );
+__( "Your plan doesn’t include any of these yet.", "jetpack-my-jetpack" );
+__( "Features a paid plan covers will appear here once you have one.", "jetpack-my-jetpack" );
+__( "No features found.", "jetpack-my-jetpack" );
 __( "Legacy sharing buttons cannot be customized on block themes.", "jetpack-my-jetpack" );
 _x( "Add the Sharing Buttons block to your theme’s template.", "Sharing block migration instruction", "jetpack-my-jetpack" );
 __( "Switch to Sharing Buttons block", "jetpack-my-jetpack" );
@@ -486,9 +523,15 @@ __( "Legacy Like buttons cannot be customized on block themes.", "jetpack-my-jet
 _x( "Add the Like block to your theme’s template.", "Like block migration instruction", "jetpack-my-jetpack" );
 __( "Switch to the Like block", "jetpack-my-jetpack" );
 __( "Deactivating legacy Like buttons…", "jetpack-my-jetpack" );
+__( "Overview", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Deactivate %s", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Activate %s", "jetpack-my-jetpack" );
 __( "Your login page now has rate-limiting and secure authentication safeguards.", "jetpack-my-jetpack" );
 __( "You can now review every event on your site and roll back when something goes wrong.", "jetpack-my-jetpack" );
 __( "You can now generate and edit content, images, and more with Jetpack AI in the editor.", "jetpack-my-jetpack" );
+__( "You can now browse your backups and restore your site from your dashboard.", "jetpack-my-jetpack" );
 __( "You can now promote your posts across millions of sites in the WordPress.com and Tumblr ad network.", "jetpack-my-jetpack" );
 __( "Your editor now has custom Jetpack blocks for rich content and layout options.", "jetpack-my-jetpack" );
 __( "Your archive pages now have canonical URLs to prevent duplicate content in search engines.", "jetpack-my-jetpack" );
@@ -547,20 +590,33 @@ __( "Failed to deactivate %s.", "jetpack-my-jetpack" );
 __( "Open Site Editor", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
 __( "Toggle %s module", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name, such as "Jetpack Boost". */
+__( "Plugin installs are turned off on this site. Ask your host or site administrator to install %s.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name, such as "Jetpack Boost". */
+__( "Your account can’t install plugins. Ask a site administrator to install %s.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "%s deactivated.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "%s is on.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "Could not change %s. Please try again.", "jetpack-my-jetpack" );
+__( "The plugin could not be installed. Please try again.", "jetpack-my-jetpack" );
+__( "Installing…", "jetpack-my-jetpack" );
+__( "Activating…", "jetpack-my-jetpack" );
+__( "Open", "jetpack-my-jetpack" );
 __( "Activate Jetpack", "jetpack-my-jetpack" );
 __( "Install Jetpack", "jetpack-my-jetpack" );
+__( "All", "jetpack-my-jetpack" );
+__( "Included in plan", "jetpack-my-jetpack" );
+__( "Essential", "jetpack-my-jetpack" );
+__( "Security", "jetpack-my-jetpack" );
+__( "Growth", "jetpack-my-jetpack" );
+__( "Other", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Learn more about %s", "jetpack-my-jetpack" );
-__( "Essential", "jetpack-my-jetpack" );
-__( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
-__( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
-__( "Not available on multisite", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Configure %s", "jetpack-my-jetpack" );
+__( "Configure", "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched on. */
 _n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched off. */
@@ -571,54 +627,50 @@ __( "Could not change the selected features. Please try again.", "jetpack-my-jet
 __( "Change this feature from its own control.", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Select %s", "jetpack-my-jetpack" );
-/* translators: %d is how many features are selected. */
-_n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
-__( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
-__( "Select all features", "jetpack-my-jetpack" );
-__( "Select features to switch several at once", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "%s in use", "jetpack-my-jetpack" );
-/* translators: 1: a plugin name, 2: a feature name. */
-__( "Install adds the %1$s plugin, then turns %2$s on for your site. It does not buy anything.", "jetpack-my-jetpack" );
-/* translators: 1: a plugin name, 2: a feature name. */
-__( "Activate switches on the %1$s plugin, already installed here, and turns %2$s on for your site.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name. Keep the <plugin> tags around it. */
+__( "Installing adds the free <plugin>%s</plugin> plugin and turns it on. You won’t be charged.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name. Keep the <plugin> tags around it. */
+__( "The <plugin>%s</plugin> plugin is already installed. Activating turns it on.", "jetpack-my-jetpack" );
+__( "Built into Jetpack, so there is nothing to install. Activating turns it on.", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
-__( "Activate turns %s on for your site. There is nothing to install, and it does not buy anything.", "jetpack-my-jetpack" );
-/* translators: %s is a feature name, such as "Stats". */
-__( "%s is part of the Jetpack plugin. Installing Jetpack turns it on; it does not buy anything.", "jetpack-my-jetpack" );
-__( "How to get it", "jetpack-my-jetpack" );
-__( "In Jetpack", "jetpack-my-jetpack" );
-/* translators: %s is a plugin name, such as "Jetpack Protect". */
-__( "View %s on WordPress.org", "jetpack-my-jetpack" );
-__( "Feature page", "jetpack-my-jetpack" );
-__( "Documentation", "jetpack-my-jetpack" );
-__( "Open", "jetpack-my-jetpack" );
-/* translators: %s is a plan name, such as "Jetpack Complete". */
-__( "Show everything in %s", "jetpack-my-jetpack" );
+__( "%s is part of the Jetpack plugin. Installing Jetpack turns it on. You won’t be charged.", "jetpack-my-jetpack" );
+__( "Support docs", "jetpack-my-jetpack" );
+__( "Included in <plan0 />", "jetpack-my-jetpack" );
+__( "Included in <plan0 /> and <plan1 />", "jetpack-my-jetpack" );
+__( "Included in <plan0 />, <plan1 /> and <plan2 />", "jetpack-my-jetpack" );
+/* translators: %s is a product name, such as "Jetpack Akismet Anti-spam". */
+__( "Upgrade to %s", "jetpack-my-jetpack" );
 __( "With a paid plan", "jetpack-my-jetpack" );
-__( "Available in", "jetpack-my-jetpack" );
-__( "What you get", "jetpack-my-jetpack" );
-__( "All", "jetpack-my-jetpack" );
-__( "Security", "jetpack-my-jetpack" );
-__( "Growth", "jetpack-my-jetpack" );
-__( "Complete", "jetpack-my-jetpack" );
+/* translators: %s is a feature name, such as "Stats". */
+__( "Previous: %s", "jetpack-my-jetpack" );
+/* translators: %s is a feature name, such as "Stats". */
+__( "Next: %s", "jetpack-my-jetpack" );
+__( "Previous feature", "jetpack-my-jetpack" );
+__( "Next feature", "jetpack-my-jetpack" );
+__( "Left arrow", "jetpack-my-jetpack" );
+__( "Right arrow", "jetpack-my-jetpack" );
+/* translators: 1: a feature name, 2: its place in the list, 3: how many are listed. */
+__( "%1$s, %2$d of %3$d", "jetpack-my-jetpack" );
+__( "How you pay", "jetpack-my-jetpack" );
+__( "Every Jetpack feature, in one place.", "jetpack-my-jetpack" );
+__( "Activate or deactivate a feature right here. Open one first to see what it does, what it needs, and where to find it once it is on.", "jetpack-my-jetpack" );
+__( "Dismiss banner", "jetpack-my-jetpack" );
+__( "Activate the Jetpack plugin to see and manage its other features.", "jetpack-my-jetpack" );
+__( "More Features", "jetpack-my-jetpack" );
 __( "Grid view", "jetpack-my-jetpack" );
 __( "List view", "jetpack-my-jetpack" );
 __( "Filter features", "jetpack-my-jetpack" );
+__( "Searching all features", "jetpack-my-jetpack" );
 __( "Search features", "jetpack-my-jetpack" );
 __( "Layout", "jetpack-my-jetpack" );
-__( "All categories", "jetpack-my-jetpack" );
-__( "Recommended", "jetpack-my-jetpack" );
-__( "Included in plan", "jetpack-my-jetpack" );
-__( "Performance", "jetpack-my-jetpack" );
-__( "Other", "jetpack-my-jetpack" );
 /* translators: %d is how many features were added to the wp-admin menu. */
 _n( "%d feature is now in your menu", "%d features are now in your menu", 1, "jetpack-my-jetpack" );
 /* translators: %s is a feature name, e.g. "Stats". */
 __( "%s is now in your menu", "jetpack-my-jetpack" );
 /* translators: %d is how many features the filter or search matched. */
 _n( "%d feature shown", "%d features shown", 1, "jetpack-my-jetpack" );
-__( "No features found.", "jetpack-my-jetpack" );
 __( "Ask us a question", "jetpack-my-jetpack" );
 __( "Have a question? Our AI Assistant can help, or connect you to our support team.", "jetpack-my-jetpack" );
 __( "Troubleshooting", "jetpack-my-jetpack" );
@@ -740,217 +792,6 @@ _x( "Activate a license", "Activate a license button text", "jetpack-my-jetpack"
 _x( "Activate a license (requires a user connection)", "Activate a license button text", "jetpack-my-jetpack" );
 __( "View included features", "jetpack-my-jetpack" );
 __( "Jetpack Essentials", "jetpack-my-jetpack" );
-/* translators: 1: Calendar type. 2: Current month and year. */
-__( "%1$s, %2$s", "jetpack-my-jetpack" );
-__( "Date calendar", "jetpack-my-jetpack" );
-__( "Date range calendar", "jetpack-my-jetpack" );
-__( "Navigation bar", "jetpack-my-jetpack" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s", "jetpack-my-jetpack" );
-__( "Next month", "jetpack-my-jetpack" );
-__( "Previous month", "jetpack-my-jetpack" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected", "jetpack-my-jetpack" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected", "jetpack-my-jetpack" );
-__( "Required", "jetpack-my-jetpack" );
-__( "Optional", "jetpack-my-jetpack" );
-__( "Sort ascending", "jetpack-my-jetpack" );
-__( "Sort descending", "jetpack-my-jetpack" );
-__( "(no title)", "jetpack-my-jetpack" );
-__( "Actions", "jetpack-my-jetpack" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack-my-jetpack" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack-my-jetpack" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-my-jetpack" );
-__( "Deselect all", "jetpack-my-jetpack" );
-__( "Select all", "jetpack-my-jetpack" );
-__( "Add filter", "jetpack-my-jetpack" );
-__( "Move left", "jetpack-my-jetpack" );
-__( "Move right", "jetpack-my-jetpack" );
-__( "Insert left", "jetpack-my-jetpack" );
-__( "Insert right", "jetpack-my-jetpack" );
-__( "Hide column", "jetpack-my-jetpack" );
-__( "Properties", "jetpack-my-jetpack" );
-__( "Navigate to item", "jetpack-my-jetpack" );
-/* translators: %d: The row number in the grid */
-__( "Row %d", "jetpack-my-jetpack" );
-/* translators: %s: The label of the field e.g. "Status". */
-__( "%s: <groupName />", "jetpack-my-jetpack" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-my-jetpack" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-my-jetpack" );
-__( "Current page", "jetpack-my-jetpack" );
-__( "Previous page", "jetpack-my-jetpack" );
-__( "Next page", "jetpack-my-jetpack" );
-__( "Density", "jetpack-my-jetpack" );
-_x( "Comfortable", "Density option for DataView layout", "jetpack-my-jetpack" );
-_x( "Balanced", "Density option for DataView layout", "jetpack-my-jetpack" );
-_x( "Compact", "Density option for DataView layout", "jetpack-my-jetpack" );
-__( "Original aspect ratio", "jetpack-my-jetpack" );
-__( "Preview size", "jetpack-my-jetpack" );
-__( "Table", "jetpack-my-jetpack" );
-__( "Grid", "jetpack-my-jetpack" );
-__( "List", "jetpack-my-jetpack" );
-__( "Activity", "jetpack-my-jetpack" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
-__( "List of: %1$s", "jetpack-my-jetpack" );
-__( "Search items", "jetpack-my-jetpack" );
-__( "Search", "jetpack-my-jetpack" );
-__( "No results found", "jetpack-my-jetpack" );
-__( "No elements found", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Is none of", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
-__( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Includes", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
-__( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Includes all", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
-__( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Between (inc)", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
-__( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "In the past", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
-__( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Over", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
-__( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Is", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
-__( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Is not", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
-__( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Less than", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
-__( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Greater than", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
-__( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Less than or equal", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
-__( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Greater than or equal", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
-__( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Before", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
-__( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "After", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
-__( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Before (inc)", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
-__( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "After (inc)", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
-__( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Contains", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
-__( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Doesn't contain", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
-__( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Starts with", "jetpack-my-jetpack" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
-__( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-my-jetpack" );
-/* translators: DataViews operator name */
-__( "Not on", "jetpack-my-jetpack" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
-__( "Unknown status for %1$s", "jetpack-my-jetpack" );
-__( "Conditions", "jetpack-my-jetpack" );
-__( "Reset", "jetpack-my-jetpack" );
-__( "Remove", "jetpack-my-jetpack" );
-/* translators: 1: Filter name. */
-__( "Filter by: %1$s", "jetpack-my-jetpack" );
-_x( "Filter", "verb", "jetpack-my-jetpack" );
-__( "No results", "jetpack-my-jetpack" );
-__( "Sort by", "jetpack-my-jetpack" );
-__( "Order", "jetpack-my-jetpack" );
-__( "Items per page", "jetpack-my-jetpack" );
-__( "Reset view", "jetpack-my-jetpack" );
-_x( "View options", "View is used as a noun", "jetpack-my-jetpack" );
-__( "Appearance", "jetpack-my-jetpack" );
-__( "Days", "jetpack-my-jetpack" );
-__( "Weeks", "jetpack-my-jetpack" );
-__( "Months", "jetpack-my-jetpack" );
-__( "Years", "jetpack-my-jetpack" );
-__( "Days ago", "jetpack-my-jetpack" );
-__( "Weeks ago", "jetpack-my-jetpack" );
-__( "Months ago", "jetpack-my-jetpack" );
-__( "Years ago", "jetpack-my-jetpack" );
-__( "Unit", "jetpack-my-jetpack" );
-__( "Coordinated Universal Time", "jetpack-my-jetpack" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
-__( "Timezone: %s", "jetpack-my-jetpack" );
-__( "Date time", "jetpack-my-jetpack" );
-__( "Today", "jetpack-my-jetpack" );
-__( "Yesterday", "jetpack-my-jetpack" );
-__( "Past week", "jetpack-my-jetpack" );
-__( "Past month", "jetpack-my-jetpack" );
-__( "Last 7 days", "jetpack-my-jetpack" );
-__( "Last 30 days", "jetpack-my-jetpack" );
-__( "Month to date", "jetpack-my-jetpack" );
-__( "Last year", "jetpack-my-jetpack" );
-__( "Year to date", "jetpack-my-jetpack" );
-__( "Custom", "jetpack-my-jetpack" );
-__( "Date", "jetpack-my-jetpack" );
-__( "From", "jetpack-my-jetpack" );
-__( "To", "jetpack-my-jetpack" );
-__( "The max. value must be greater than the min. value.", "jetpack-my-jetpack" );
-__( "Min.", "jetpack-my-jetpack" );
-__( "Max.", "jetpack-my-jetpack" );
-__( "The end time must be later than the start time.", "jetpack-my-jetpack" );
-__( "Open color picker", "jetpack-my-jetpack" );
-__( "Hide password", "jetpack-my-jetpack" );
-__( "Show password", "jetpack-my-jetpack" );
-__( "Value must be a valid email address.", "jetpack-my-jetpack" );
-__( "Value must be an integer.", "jetpack-my-jetpack" );
-__( "Value must be a number.", "jetpack-my-jetpack" );
-__( "True", "jetpack-my-jetpack" );
-__( "False", "jetpack-my-jetpack" );
-__( "Value must be true, false, or undefined", "jetpack-my-jetpack" );
-__( "Value must be an array.", "jetpack-my-jetpack" );
-__( "Every value must be a string.", "jetpack-my-jetpack" );
-__( "Value must be a valid color.", "jetpack-my-jetpack" );
-__( "Title", "jetpack-my-jetpack" );
-__( "Toggle", "jetpack-my-jetpack" );
-/* translators: %s is either the product name, i.e.- "Jetpack Backup" or the word "Plugins". */
-__( "%s deactivated successfully!", "jetpack-my-jetpack" );
-/* translators: %s is the Jetpack product name or comma-separated list of multiple Jetpack product names. */
-__( "There was a problem deactivating %s.", "jetpack-my-jetpack" );
-__( "Error getting plan information.", "jetpack-my-jetpack" );
-__( "No results found.", "jetpack-my-jetpack" );
-__( "Action", "jetpack-my-jetpack" );
-__( "Search results", "jetpack-my-jetpack" );
-__( "Search products", "jetpack-my-jetpack" );
-__( "Filter products", "jetpack-my-jetpack" );
-__( "Manage and explore Jetpack features that boost growth, performance, and security.", "jetpack-my-jetpack" );
-__( "Manage and explore Jetpack products that boost growth, performance, and security.", "jetpack-my-jetpack" );
 __( "Welcome to Jetpack", "jetpack-my-jetpack" );
 __( "Done", "jetpack-my-jetpack" );
 __( "Simple, yet powerful stats", "jetpack-my-jetpack" );

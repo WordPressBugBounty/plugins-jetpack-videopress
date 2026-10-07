@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6
+class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_7
 {
     public static $files = array (
         '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-assets/actions.php',
@@ -109,7 +109,6 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6
         'Automattic\\Jetpack\\Errors' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-errors.php',
         'Automattic\\Jetpack\\ExPlat' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-explat/src/class-explat.php',
         'Automattic\\Jetpack\\ExPlat\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-explat/src/class-rest-controller.php',
-        'Automattic\\Jetpack\\Feature_Flags\\Feature_Flags' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-feature-flags/src/class-feature-flags.php',
         'Automattic\\Jetpack\\Feature_Policy' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-feature-policy.php',
         'Automattic\\Jetpack\\Files' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php',
         'Automattic\\Jetpack\\Heartbeat' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-heartbeat.php',
@@ -166,7 +165,6 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6
         'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php',
         'Automattic\\Jetpack\\My_Jetpack\\REST_Purchases' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-purchases.php',
         'Automattic\\Jetpack\\My_Jetpack\\REST_Recommendations_Evaluation' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-recommendations-evaluation.php',
-        'Automattic\\Jetpack\\My_Jetpack\\REST_Zendesk_Chat' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-zendesk-chat.php',
         'Automattic\\Jetpack\\My_Jetpack\\Red_Bubble_Notifications' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-red-bubble-notifications.php',
         'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php',
         'Automattic\\Jetpack\\Partner' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-partner.php',
@@ -257,11 +255,14 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6
         'Automattic\\Jetpack\\VideoPress\\AJAX' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-ajax.php',
         'Automattic\\Jetpack\\VideoPress\\Access_Control' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-access-control.php',
         'Automattic\\Jetpack\\VideoPress\\Admin_UI' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-admin-ui.php',
+        'Automattic\\Jetpack\\VideoPress\\All_Playlists_Block' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-all-playlists-block.php',
+        'Automattic\\Jetpack\\VideoPress\\Analytics_Dashboard' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-analytics-dashboard.php',
         'Automattic\\Jetpack\\VideoPress\\Attachment_Handler' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-attachment-handler.php',
         'Automattic\\Jetpack\\VideoPress\\Block_Editor_Content' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-content.php',
         'Automattic\\Jetpack\\VideoPress\\Block_Editor_Extensions' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-extensions.php',
         'Automattic\\Jetpack\\VideoPress\\Block_Replacement' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-replacement.php',
         'Automattic\\Jetpack\\VideoPress\\Caption_Tracks' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-caption-tracks.php',
+        'Automattic\\Jetpack\\VideoPress\\Channel' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-channel.php',
         'Automattic\\Jetpack\\VideoPress\\Data' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-data.php',
         'Automattic\\Jetpack\\VideoPress\\Divi' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-divi.php',
         'Automattic\\Jetpack\\VideoPress\\Divi5\\Divi_5' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi-5/class-divi-5.php',
@@ -279,6 +280,7 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6
         'Automattic\\Jetpack\\VideoPress\\Options' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php',
         'Automattic\\Jetpack\\VideoPress\\Package_Version' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-package-version.php',
         'Automattic\\Jetpack\\VideoPress\\Plan' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-plan.php',
+        'Automattic\\Jetpack\\VideoPress\\Playlist_Index' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-playlist-index.php',
         'Automattic\\Jetpack\\VideoPress\\Rest_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-rest-controller.php',
         'Automattic\\Jetpack\\VideoPress\\Site' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-site.php',
         'Automattic\\Jetpack\\VideoPress\\Stats' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-stats.php',
@@ -297,6 +299,7 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Attachment_VideoPress_Field' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-attachment-field-videopress.php',
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress.php',
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress_Caption_Tracks' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress-caption-tracks.php',
+        'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress_Edits' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress-edits.php',
         'Automattic\\Jetpack\\VideoPress\\XMLRPC' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php',
         'Automattic\\Jetpack\\WP_Build_Polyfills\\WP_Build_Admin_Frame' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wp-build-polyfills/src/class-wp-build-admin-frame.php',
         'Automattic\\Jetpack\\WP_Build_Polyfills\\WP_Build_Polyfills' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wp-build-polyfills/src/class-wp-build-polyfills.php',
@@ -325,9 +328,9 @@ class ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_6::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_7::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitc4802e05bbcf59fd3b6350e8d3e5482c_videopressⓥ3_7::$classMap;
 
         }, null, ClassLoader::class);
     }

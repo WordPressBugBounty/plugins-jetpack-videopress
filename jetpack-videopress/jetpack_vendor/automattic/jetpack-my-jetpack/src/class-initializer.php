@@ -19,7 +19,6 @@ use Automattic\Jetpack\Connection\Rest_Authentication as Connection_Rest_Authent
 use Automattic\Jetpack\Connection\REST_Jetpack_AI_JWT;
 use Automattic\Jetpack\Constants as Jetpack_Constants;
 use Automattic\Jetpack\ExPlat;
-use Automattic\Jetpack\Feature_Flags\Feature_Flags;
 use Automattic\Jetpack\JITMS\JITM;
 use Automattic\Jetpack\Licensing;
 use Automattic\Jetpack\Menu_Badges\Menu_Badges;
@@ -47,12 +46,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.6.0';
-
-	/**
-	 * Feature flag that swaps the My Jetpack Products tab for a Features tab.
-	 */
-	const FEATURES_TAB_FEATURE_FLAG = 'my-jetpack-features-tab';
+	const PACKAGE_VERSION = '6.9.0';
 
 	/**
 	 * Handle for the classic script that carries the React initial state.
@@ -110,9 +104,6 @@ class Initializer {
 	 * @return void
 	 */
 	public static function init() {
-		// Before the gate, so the flag stays listed while diagnosing why My Jetpack is off.
-		self::register_feature_flags();
-
 		// Before the gate: the Jetpack plugin renders this package's connection screen and footer
 		// links even where My Jetpack is off, and `myJetpackInitialState` only exists on its own page.
 		add_filter( 'jetpack_admin_js_script_data', array( __CLASS__, 'add_admin_script_data' ) );
@@ -208,6 +199,7 @@ class Initializer {
 	 * @return void
 	 */
 	public static function add_my_jetpack_menu_item() {
+		$position    = defined( Admin_Menu::class . '::POSITION_FIRST' ) ? Admin_Menu::POSITION_FIRST : -10;
 		$menu_slug   = 'my-jetpack';
 		$page_suffix = Admin_Menu::add_menu(
 			__( 'My Jetpack', 'jetpack-my-jetpack' ),
@@ -215,7 +207,7 @@ class Initializer {
 			'edit_posts',
 			$menu_slug,
 			array( __CLASS__, 'admin_page' ),
-			Admin_Menu::POSITION_FIRST
+			$position
 		);
 		add_action( 'load-' . $page_suffix, array( __CLASS__, 'admin_init' ) );
 		// Users who can edit posts but have no Jetpack menu get an admin_page_ hook instead.
@@ -360,55 +352,6 @@ class Initializer {
 		$tracking   = new Tracking( 'jetpack', $connection );
 
 		return $tracking->should_enable_tracking( new Terms_Of_Service(), $status );
-	}
-
-	/**
-	 * Register the package's feature flags.
-	 *
-	 * @since 6.3.0
-	 *
-	 * @return void
-	 */
-	public static function register_feature_flags() {
-		Feature_Flags::register(
-			self::FEATURES_TAB_FEATURE_FLAG,
-			array(
-				'default'     => false,
-				'description' => 'Replace the My Jetpack Products tab with a Features tab.',
-				'owner'       => 'my-jetpack',
-			)
-		);
-	}
-
-	/**
-	 * Whether the dashboard shows a Features tab in place of the Products tab.
-	 *
-	 * @since 6.4.0
-	 *
-	 * @return bool
-	 */
-	public static function is_features_tab_enabled() {
-		return Feature_Flags::is_enabled( self::FEATURES_TAB_FEATURE_FLAG );
-	}
-
-	/**
-	 * Get the slug and label that replace the Products tab, for links to it.
-	 *
-	 * Null while the tab is unchanged, so links keep their own translated "Products" label.
-	 *
-	 * @since 6.4.0
-	 *
-	 * @return array{slug: string, label: string}|null
-	 */
-	public static function get_products_section() {
-		if ( ! self::is_features_tab_enabled() ) {
-			return null;
-		}
-
-		return array(
-			'slug'  => 'features',
-			'label' => _x( 'Features', 'Navigation item', 'jetpack-my-jetpack' ),
-		);
 	}
 
 	/**
@@ -649,7 +592,8 @@ class Initializer {
 				'products'               => array(
 					'items' => Products::get_products(),
 				),
-				'mainFeatures'           => self::is_features_tab_enabled() ? Main_Features::get_state() : null,
+				'mainFeatures'           => Main_Features::get_state(),
+				'featuresBanner'         => array( 'isDismissed' => REST_Main_Features::is_banner_dismissed() ),
 				'plugins'                => Plugins_Installer::get_plugins(),
 				'themes'                 => Sync_Functions::get_themes(),
 				'myJetpackUrl'           => admin_url( 'admin.php?page=my-jetpack' ),
@@ -734,10 +678,27 @@ class Initializer {
 	}
 
 	/**
-	 * Add My Jetpack availability, image base URL, and products tab to admin script data.
+	 * Get the slug and label of the Features tab, for footer links to it.
+	 *
+	 * Kept for footers built before the Products tab was removed: Jetpack 16.3 calls this, and
+	 * older JS footers read it from script data. Without it they link to "Products".
+	 *
+	 * @since 6.4.0
+	 *
+	 * @return array{slug: string, label: string}
+	 */
+	public static function get_products_section() {
+		return array(
+			'slug'  => 'features',
+			'label' => _x( 'Features', 'Navigation item', 'jetpack-my-jetpack' ),
+		);
+	}
+
+	/**
+	 * Add My Jetpack availability and image base URL to admin script data.
 	 *
 	 * Printed on every admin page by Script_Data, so the connection screen can resolve its
-	 * illustrations and Jetpack footers can link to the products tab off the My Jetpack page.
+	 * illustrations and Jetpack footers know whether to link to My Jetpack.
 	 *
 	 * @since 6.3.0
 	 *
@@ -947,13 +908,10 @@ class Initializer {
 	public static function register_rest_endpoints() {
 		new REST_Products();
 		new REST_Purchases();
-		new REST_Zendesk_Chat();
 		( new REST_Jetpack_AI_JWT() )->register_rest_route();
 		new REST_Recommendations_Evaluation();
 
-		if ( self::is_features_tab_enabled() ) {
-			( new REST_Main_Features() )->register_rest_routes();
-		}
+		( new REST_Main_Features() )->register_rest_routes();
 
 		Products::register_product_endpoints();
 		Historically_Active_Modules::register_rest_endpoints();
